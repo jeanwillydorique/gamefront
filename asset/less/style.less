@@ -1,0 +1,110 @@
+
+@baseColor: Black;
+@accentColor: lightgrey;
+@white: white;
+@buttoncolor: #4CAF50;
+
+@textSize: 10px;
+@titleSize: 20px; 
+
+.accent{
+    background-color: @accentColor;
+}
+
+.parentcentercolumn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.parentcenterline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nopaddingandmargin{
+    padding:0;
+    margin:0;
+}
+.buttonstyle{
+
+    display: block;
+    border: none;
+    background-color: @buttoncolor;
+    margin-left: 10px;
+    padding: 14px 28px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.focusoff{
+    outline: none;
+}
+
+.resultSizeText{
+    font-size: 40px;
+}
+
+body{
+    .accent();
+    .parentcenterline();
+}
+
+main{
+    .parentcentercolumn();
+    height: 900px;
+    width: 900px;
+    justify-content: space-around;
+}
+
+.params {
+    border: 1px solid black;
+    .pseudo{
+        border: 1px solid black;
+    }
+    .play{
+        border: 1px solid white;
+    }
+}
+
+.game{
+    .parentcentercolumn();
+    justify-content: space-around;
+    height: 700px;
+    width: 800px;
+    .screen {
+        .parentcenterline();
+        height: 500px;
+        width: 800px;
+        background-color: @white;
+        .resultSizeText();
+    }
+    .button{
+        .parentcenterline();
+        .pierre{
+            .buttonstyle();
+            :hover {
+                .focusoff();
+            }
+        }
+        .papier{
+            .buttonstyle();
+            :hover {
+                .focusoff();
+            }
+        }
+        .ciseaux{
+            .buttonstyle();
+            :hover {
+                .focusoff();
+            }
+        }
+    }
+}
+
+.resulscreen{
+    height: 100px;
+    width: 800px;
+    background-color: @white;
+}
